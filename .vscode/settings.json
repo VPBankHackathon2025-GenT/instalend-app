@@ -1,0 +1,17 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "apps/frontend/wiremock/sources/*/mappings/*.json",
+        "apps/server/wiremock/sources/*/mappings/*.json"
+      ],
+      "url": "./wiremock/schemas/mappings.json"
+    }
+  ]
+}
