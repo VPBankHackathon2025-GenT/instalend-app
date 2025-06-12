@@ -25,12 +25,6 @@ beforeAll(async () => {
   await integrationTestApp.init();
 });
 
-beforeEach(async () => {
-  jest.clearAllMocks();
-  jest.clearAllTimers();
-  jest.useRealTimers();
-});
-
 afterAll(async () => {
   await integrationTestApp.close();
 });
