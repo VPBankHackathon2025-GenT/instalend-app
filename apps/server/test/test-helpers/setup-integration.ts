@@ -1,15 +1,8 @@
-import { config } from 'dotenv';
-import { resolve } from 'path';
-
-// Has to happen before any other imports
-config({ path: resolve(__dirname, '../../.env.integration'), override: true });
-
+import { configApp } from '@/app';
+import { AppModule } from '@/app.module';
 import { INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { Server } from 'net';
-
-import { configApp } from '../../src/app';
-import { AppModule } from '@/app.module';
 
 let integrationTestModule: TestingModule;
 let integrationTestApp: INestApplication<Server>;

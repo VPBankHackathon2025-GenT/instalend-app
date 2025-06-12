@@ -1,6 +1,8 @@
-import globalConfig from '../../eslint.config.js';
-import tseslint from 'typescript-eslint';
+const tseslint = require('typescript-eslint');
 
-export default tseslint.config({
-  extends: [...globalConfig],
-});
+module.exports = (async () => {
+  const globalConfig = await import('../../eslint.config.js');
+  return tseslint.config({
+    extends: [...globalConfig.default],
+  });
+})();
